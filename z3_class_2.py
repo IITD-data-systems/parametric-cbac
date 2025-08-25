@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 from helper import load_schema, col_index, load_vals, find_code,build_gid_maps, edges_from_pairs,find_codes,report,bin_by_signature, X, AndN, OrN, bit_of,create_constraint
 from z3 import Not, Implies, Solver,BoolVal,Bool,Or,And,sat
-from itertools import count
+
 
 t0 = time.time()
 
@@ -269,7 +269,7 @@ allowed_classes = np.flatnonzero(exists_p).tolist()
 
 policy = AndN(AndN(X(1),X(2),X(3),X(4),X(5)),AndN(X(1),X(2),X(3),X(6),X(7)))
 
-t_counter = count()
+
 
 solver = Solver()
 
