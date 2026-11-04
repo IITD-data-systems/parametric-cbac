@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE valueuom = 'mmHg' AND NOT EXISTS (SELECT 1 FROM public.labevents l WHERE l.subject_id = chartevents.subject_id AND l.charttime = chartevents.charttime);

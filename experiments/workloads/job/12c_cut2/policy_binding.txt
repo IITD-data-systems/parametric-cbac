@@ -1,0 +1,15 @@
+query: q1
+1.ast = EXISTS ((a1 AND (a2 OR a3 OR a4 OR a5) AND a6 AND a7))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = GE
+1.op7 = LE
+1.value1 = 'Drama'
+1.value2 = 'Horror'
+1.value3 = 'Western'
+1.value4 = 'Family'
+1.value5 = 2000
+1.value6 = 2010

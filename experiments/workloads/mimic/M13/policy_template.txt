@@ -1,0 +1,8 @@
+policy 1
+target: chartevents
+atom a1: admissions.hadm_id @op1 chartevents.hadm_id
+atom a2: patients.subject_id @op2 admissions.subject_id
+atom a3: patients.anchor_age @op3 @value1
+atom a4: admissions.hadm_id @op4 chartevents.hadm_id
+atom a5: admissions.hospital_expire_flag @op5 @value2
+end

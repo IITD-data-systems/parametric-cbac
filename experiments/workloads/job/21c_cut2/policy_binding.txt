@@ -1,0 +1,25 @@
+query: q1
+1.ast = EXISTS ((a1 AND (a2 OR a3 OR a4 OR a5 OR a6 OR a7 OR a8 OR a9 OR a10) AND a11 AND a12))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.op8 = EQ
+1.op9 = EQ
+1.op10 = EQ
+1.op11 = GE
+1.op12 = LE
+1.value1 = 'Sweden'
+1.value2 = 'Norway'
+1.value3 = 'Germany'
+1.value4 = 'Denmark'
+1.value5 = 'Swedish'
+1.value6 = 'Denish'
+1.value7 = 'Norwegian'
+1.value8 = 'German'
+1.value9 = 'English'
+1.value10 = 1950
+1.value11 = 2010

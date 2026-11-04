@@ -1,0 +1,24 @@
+query: q1
+1.ast = EXISTS ((a1 AND a2 AND a3 AND a4 AND (a5 OR a6 OR a7 OR a8 OR a9 OR a10 OR a11 OR a12) AND a13))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.op8 = EQ
+1.op9 = EQ
+1.op10 = EQ
+1.op11 = EQ
+1.op12 = EQ
+1.op13 = GT
+1.value1 = 'superhero'
+1.value2 = 'sequel'
+1.value3 = 'second-part'
+1.value4 = 'marvel-comics'
+1.value5 = 'based-on-comic'
+1.value6 = 'tv-special'
+1.value7 = 'fight'
+1.value8 = 'violence'
+1.value9 = 2000

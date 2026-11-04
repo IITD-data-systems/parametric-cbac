@@ -1,0 +1,16 @@
+policy 1
+target: chartevents
+atom a1: labevents.subject_id @op1 chartevents.subject_id
+atom a2: labevents.charttime @op2 chartevents.charttime
+atom a3: d_labitems.itemid @op3 labevents.itemid
+atom a4: d_labitems.label @op4 @value1
+atom a5: d_labitems.fluid @op5 @value2
+atom a6: labevents.flag @op6 @value3
+atom a7: admissions.hadm_id @op7 chartevents.hadm_id
+atom a8: patients.subject_id @op8 admissions.subject_id
+atom a9: patients.anchor_age @op9 @value4
+atom a10: icustays.stay_id @op10 chartevents.stay_id
+atom a11: admissions.hadm_id @op11 chartevents.hadm_id
+atom a12: patients.subject_id @op12 admissions.subject_id
+atom a13: patients.anchor_age @op13 @value5
+end

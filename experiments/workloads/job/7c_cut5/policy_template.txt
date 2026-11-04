@@ -1,0 +1,15 @@
+policy 1
+target: title
+atom a1: cast_info.person_id @op1 name.id
+atom a2: title.id @op2 cast_info.movie_id
+atom a3: movie_link.linked_movie_id @op3 title.id
+atom a4: link_type.id @op4 movie_link.link_type_id
+atom a5: link_type.link @op5 @value1
+atom a6: link_type.link @op6 @value2
+atom a7: link_type.link @op7 @value3
+atom a8: link_type.link @op8 @value4
+atom a9: name.name_pcode_cf @op9 @value5
+atom a10: name.name_pcode_cf @op10 @value6
+atom a11: title.production_year @op11 @value7
+atom a12: title.production_year @op12 @value8
+end

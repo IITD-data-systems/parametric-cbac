@@ -1,0 +1,4 @@
+SELECT count(*) FROM public.lineitem lineitem
+  LEFT JOIN (SELECT DISTINCT d.l_orderkey AS key1, d.l_suppkey AS key2, 1 AS hit FROM (SELECT DISTINCT l_orderkey, l_suppkey FROM public.lineitem) d, public.orders o, public.customer c, public.supplier s, public.nation n, public.region r WHERE c.c_custkey = o.o_custkey AND s.s_nationkey = c.c_nationkey AND s.s_acctbal > c.c_acctbal AND n.n_nationkey = c.c_nationkey AND r.r_regionkey = n.n_regionkey AND r.r_name = 'ASIA' AND d.l_orderkey = o.o_orderkey AND d.l_suppkey = s.s_suppkey) b1 ON lineitem.l_orderkey = b1.key1 AND lineitem.l_suppkey = b1.key2
+  LEFT JOIN (SELECT DISTINCT key1, 1 AS hit FROM (SELECT o.o_orderkey AS key1 FROM public.orders o, public.customer c WHERE c.c_custkey = o.o_custkey AND c.c_acctbal < 0) x) b2 ON lineitem.l_orderkey = b2.key1
+WHERE (b1.hit IS NULL AND b2.hit IS NULL);

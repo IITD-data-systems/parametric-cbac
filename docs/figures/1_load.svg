@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="611" height="269" viewBox="0 0 611 269" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="14">
+<rect width="611" height="269" rx="8" fill="#1e1f22"/>
+<rect width="611" height="28" rx="8" fill="#2b2d31"/>
+<rect y="20" width="611" height="8" fill="#2b2d31"/>
+<circle cx="22" cy="14.0" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="14.0" r="6" fill="#febc2e"/>
+<circle cx="62" cy="14.0" r="6" fill="#28c840"/>
+<text x="305.5" y="19.0" fill="#9a9ca3" font-size="13" text-anchor="middle">1. Load TPC-H</text>
+<text x="16" y="59.2" fill="#e6edf3" xml:space="preserve"><tspan fill="#7ee787">$ </tspan>experiments/sample_datasets/load_tpch.sh ~/tpch-dbgen 0.1 tpch_sf01</text>
+<text x="16" y="78.2" fill="#b6bac2" xml:space="preserve">generating TPC-H scale factor 0.1</text>
+<text x="16" y="97.19999999999999" fill="#b6bac2" xml:space="preserve">loaded region</text>
+<text x="16" y="116.2" fill="#b6bac2" xml:space="preserve">loaded nation</text>
+<text x="16" y="135.2" fill="#b6bac2" xml:space="preserve">loaded supplier</text>
+<text x="16" y="154.2" fill="#b6bac2" xml:space="preserve">loaded customer</text>
+<text x="16" y="173.2" fill="#b6bac2" xml:space="preserve">loaded part</text>
+<text x="16" y="192.2" fill="#b6bac2" xml:space="preserve">loaded partsupp</text>
+<text x="16" y="211.20000000000002" fill="#b6bac2" xml:space="preserve">loaded orders</text>
+<text x="16" y="230.20000000000002" fill="#b6bac2" xml:space="preserve">loaded lineitem</text>
+<text x="16" y="249.20000000000002" fill="#b6bac2" xml:space="preserve">database tpch_sf01 ready</text>
+</svg>

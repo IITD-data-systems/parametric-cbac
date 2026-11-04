@@ -1,0 +1,1 @@
+1. title: EXISTS (SELECT 1 FROM public.movie_info mi WHERE mi.movie_id = title.id AND (mi.info = 'Sweden' OR mi.info = 'Norway' OR mi.info = 'Germany' OR mi.info = 'Denmark' OR mi.info = 'Swedish' OR mi.info = 'Denish' OR mi.info = 'Norwegian' OR mi.info = 'German' OR mi.info = 'English') AND title.production_year >= 1950 AND title.production_year <= 2010)

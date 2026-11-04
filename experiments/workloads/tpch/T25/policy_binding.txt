@@ -1,0 +1,20 @@
+query: q1
+1.ast = (EXISTS ((a1 AND a2 AND a3 AND a4 AND a5 AND a6)) AND NOT EXISTS ((a7 AND a8 AND a9 AND a10 AND a11 AND a12 AND a13)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = GT
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.op8 = EQ
+1.op9 = EQ
+1.op10 = EQ
+1.op11 = EQ
+1.op12 = GE
+1.op13 = LT
+1.value1 = 'F'
+1.value2 = 'SAUDI ARABIA'
+1.value3 = 20
+1.value4 = 45
+1.value5 = 2000

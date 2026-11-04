@@ -1,0 +1,9 @@
+query: q1
+1.ast = (EXISTS ((a1 AND a2)) OR NOT EXISTS ((a3 AND a4 AND a5)))
+1.op1 = GE
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = LT
+1.value1 = 7
+1.value2 = 0

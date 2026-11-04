@@ -1,0 +1,18 @@
+policy 1
+target: chartevents
+atom a1: diagnoses_icd.hadm_id @op1 chartevents.hadm_id
+atom a2: diagnoses_icd.icd_code @op2 @value1
+atom a3: diagnoses_icd.icd_code @op3 @value2
+atom a4: d_icd_diagnoses.icd_code @op4 diagnoses_icd.icd_code
+atom a5: d_icd_diagnoses.icd_version @op5 diagnoses_icd.icd_version
+atom a6: admissions.hadm_id @op6 chartevents.hadm_id
+atom a7: patients.subject_id @op7 admissions.subject_id
+atom a8: icustays.stay_id @op8 chartevents.stay_id
+atom a9: transfers.hadm_id @op9 admissions.hadm_id
+atom a10: transfers.careunit @op10 icustays.last_careunit
+atom a11: services.hadm_id @op11 admissions.hadm_id
+atom a12: services.curr_service @op12 @value3
+atom a13: outputevents.stay_id @op13 icustays.stay_id
+atom a14: outputevents.itemid @op14 @value4
+atom a15: procedures_icd.hadm_id @op15 admissions.hadm_id
+end

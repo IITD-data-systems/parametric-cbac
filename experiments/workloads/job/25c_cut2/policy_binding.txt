@@ -1,0 +1,15 @@
+query: q1
+1.ast = EXISTS ((a1 AND (a2 OR a3 OR a4 OR a5 OR a6 OR a7)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.value1 = 'Horror'
+1.value2 = 'Action'
+1.value3 = 'Sci-Fi'
+1.value4 = 'Thriller'
+1.value5 = 'Crime'
+1.value6 = 'War'

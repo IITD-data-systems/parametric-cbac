@@ -1,0 +1,5 @@
+policy 1
+target: lineitem
+atom a1: lineitem.l_shipmode @op1 @value1
+atom a2: lineitem.l_shipmode @op2 @value2
+end

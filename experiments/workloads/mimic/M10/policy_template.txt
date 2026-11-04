@@ -1,0 +1,7 @@
+policy 1
+target: chartevents
+atom a1: inputevents.stay_id @op1 chartevents.stay_id
+atom a2: inputevents.itemid @op2 @value1
+atom a3: chartevents.charttime @op3 inputevents.starttime
+atom a4: chartevents.charttime @op4 inputevents.endtime
+end

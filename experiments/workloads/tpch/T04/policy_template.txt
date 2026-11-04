@@ -1,0 +1,5 @@
+policy 1
+target: lineitem
+atom a1: orders.o_orderkey @op1 lineitem.l_orderkey
+atom a2: orders.o_orderpriority @op2 @value1
+end

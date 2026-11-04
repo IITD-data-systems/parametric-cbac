@@ -1,0 +1,93 @@
+policy 1
+target: lineitem
+occ customer__nested15: customer
+occ customer__nested2: customer
+occ customer__nested21: customer
+occ customer__nested9: customer
+occ lineitem: lineitem
+occ lineitem__nested23: lineitem
+occ nation__nested6: nation
+occ orders__nested1: orders
+occ orders__nested14: orders
+occ orders__nested20: orders
+occ orders__nested8: orders
+occ part__nested10: part
+occ part__nested16: part
+occ part__nested22: part
+occ part__nested3: part
+occ partsupp__nested11: partsupp
+occ partsupp__nested13: partsupp
+occ partsupp__nested18: partsupp
+occ partsupp__nested24: partsupp
+occ partsupp__nested4: partsupp
+occ region__nested7: region
+occ supplier__nested12: supplier
+occ supplier__nested17: supplier
+occ supplier__nested19: supplier
+occ supplier__nested25: supplier
+occ supplier__nested5: supplier
+atom a1: orders__nested1.o_orderkey = lineitem.l_orderkey
+atom a2: customer__nested2.c_custkey = orders__nested1.o_custkey
+atom a3: part__nested3.p_partkey = lineitem.l_partkey
+atom a4: lineitem.l_shipmode != 'AIR'
+atom a5: lineitem.l_discount != lineitem.l_tax
+atom a6: orders__nested1.o_totalprice > 25000
+atom a7: orders__nested1.o_totalprice <= 288000
+atom a8: partsupp__nested4.ps_partkey = part__nested3.p_partkey
+atom a9: supplier__nested5.s_suppkey = partsupp__nested4.ps_suppkey
+atom a10: lineitem.l_suppkey != partsupp__nested4.ps_suppkey
+atom a11: supplier__nested5.s_nationkey <= customer__nested2.c_nationkey
+atom a12: supplier__nested5.s_acctbal <= partsupp__nested4.ps_supplycost
+atom a13: supplier__nested5.s_acctbal < customer__nested2.c_acctbal
+atom a14: nation__nested6.n_nationkey = supplier__nested5.s_nationkey
+atom a15: region__nested7.r_regionkey = nation__nested6.n_regionkey
+atom a16: region__nested7.r_name != 'EUROPE'
+atom a17: orders__nested8.o_orderkey = lineitem.l_orderkey
+atom a18: customer__nested9.c_custkey = orders__nested8.o_custkey
+atom a19: part__nested10.p_partkey = lineitem.l_partkey
+atom a20: orders__nested8.o_orderstatus = 'O'
+atom a21: part__nested10.p_brand != 'Brand#11'
+atom a22: partsupp__nested11.ps_partkey = part__nested10.p_partkey
+atom a23: supplier__nested12.s_suppkey = partsupp__nested11.ps_suppkey
+atom a24: lineitem.l_suppkey = partsupp__nested11.ps_suppkey
+atom a25: supplier__nested12.s_nationkey < customer__nested9.c_nationkey
+atom a26: supplier__nested12.s_acctbal >= partsupp__nested11.ps_supplycost
+atom a27: partsupp__nested13.ps_partkey = lineitem.l_partkey
+atom a28: partsupp__nested13.ps_supplycost < customer__nested9.c_acctbal
+atom a29: partsupp__nested13.ps_supplycost < partsupp__nested11.ps_supplycost
+atom a30: partsupp__nested13.ps_availqty > partsupp__nested11.ps_availqty
+atom a31: partsupp__nested13.ps_availqty > 4500
+atom a32: partsupp__nested13.ps_availqty <= 9000
+atom a33: orders__nested14.o_orderkey = lineitem.l_orderkey
+atom a34: customer__nested15.c_custkey = orders__nested14.o_custkey
+atom a35: part__nested16.p_partkey = lineitem.l_partkey
+atom a36: lineitem.l_quantity != part__nested16.p_size
+atom a37: orders__nested14.o_orderpriority != '5-LOW'
+atom a38: supplier__nested17.s_suppkey = lineitem.l_suppkey
+atom a39: supplier__nested17.s_acctbal > customer__nested15.c_acctbal
+atom a40: supplier__nested17.s_nationkey != customer__nested15.c_nationkey
+atom a41: supplier__nested17.s_acctbal > 1700
+atom a42: supplier__nested17.s_acctbal <= 9700
+atom a43: partsupp__nested18.ps_partkey = part__nested16.p_partkey
+atom a44: supplier__nested19.s_suppkey = partsupp__nested18.ps_suppkey
+atom a45: lineitem.l_suppkey <= partsupp__nested18.ps_suppkey
+atom a46: supplier__nested19.s_nationkey > customer__nested15.c_nationkey
+atom a47: supplier__nested19.s_acctbal >= partsupp__nested18.ps_supplycost
+atom a48: supplier__nested19.s_acctbal < part__nested16.p_retailprice
+atom a49: orders__nested20.o_orderkey = lineitem.l_orderkey
+atom a50: customer__nested21.c_custkey = orders__nested20.o_custkey
+atom a51: part__nested22.p_partkey = lineitem.l_partkey
+atom a52: customer__nested21.c_acctbal < lineitem.l_extendedprice
+atom a53: lineitem__nested23.l_partkey = lineitem.l_partkey
+atom a54: lineitem__nested23.l_suppkey != lineitem.l_suppkey
+atom a55: lineitem__nested23.l_receiptdate < lineitem.l_receiptdate
+atom a56: lineitem__nested23.l_discount < lineitem.l_discount
+atom a57: lineitem__nested23.l_tax > lineitem.l_tax
+atom a58: lineitem__nested23.l_discount >= 0.04
+atom a59: lineitem__nested23.l_discount <= 0.05
+atom a60: partsupp__nested24.ps_partkey = part__nested22.p_partkey
+atom a61: supplier__nested25.s_suppkey = partsupp__nested24.ps_suppkey
+atom a62: lineitem.l_suppkey > partsupp__nested24.ps_suppkey
+atom a63: supplier__nested25.s_nationkey != customer__nested21.c_nationkey
+atom a64: supplier__nested25.s_acctbal >= partsupp__nested24.ps_supplycost
+end

@@ -1,0 +1,1 @@
+1. lineitem: (l_shipinstruct = 'DELIVER IN PERSON' OR NOT EXISTS (SELECT 1 FROM public.orders o WHERE o.o_orderdate = lineitem.l_receiptdate AND o.o_orderpriority = '1-URGENT' AND o.o_totalprice > 450000))

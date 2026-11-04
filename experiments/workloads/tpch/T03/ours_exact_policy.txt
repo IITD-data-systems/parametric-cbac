@@ -1,0 +1,1 @@
+1. lineitem: l_discount >= 0.09 AND l_quantity >= 45

@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.title title WHERE EXISTS (SELECT 1 FROM public.movie_info mi WHERE title.id = mi.movie_id AND (mi.info = 'Drama' OR mi.info = 'Horror' OR mi.info = 'Western' OR mi.info = 'Family') AND title.production_year >= 2000 AND title.production_year <= 2010);

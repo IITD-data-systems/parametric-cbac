@@ -1,0 +1,5 @@
+policy 1
+target: chartevents
+atom a1: d_items.itemid @op1 chartevents.itemid
+atom a2: chartevents.valuenum @op2 d_items.highnormalvalue
+end

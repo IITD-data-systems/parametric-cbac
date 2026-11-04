@@ -1,0 +1,1 @@
+1. chartevents: NOT EXISTS (SELECT 1 FROM public.inputevents ie WHERE ie.stay_id = chartevents.stay_id AND ie.itemid = 222168 AND chartevents.charttime >= ie.starttime AND chartevents.charttime <= ie.endtime)

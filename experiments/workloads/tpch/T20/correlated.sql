@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.lineitem lineitem WHERE (EXISTS (SELECT 1 FROM public.supplier s WHERE s.s_acctbal >= lineitem.l_extendedprice AND s.s_nationkey = 7) OR NOT EXISTS (SELECT 1 FROM public.orders o, public.customer c WHERE o.o_orderkey = lineitem.l_orderkey AND c.c_custkey = o.o_custkey AND c.c_acctbal < 0));

@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE valueuom = 'insp/min' AND EXISTS (SELECT 1 FROM public.procedureevents pe WHERE pe.stay_id = chartevents.stay_id AND pe.itemid = 225792 AND chartevents.charttime >= pe.starttime AND chartevents.charttime <= pe.endtime);

@@ -1,0 +1,3 @@
+SELECT count(*) FROM public.title title
+  LEFT JOIN (SELECT key1, 1 AS hit FROM (SELECT ci.movie_id AS key1 FROM public.aka_name an, public.char_name chn, public.cast_info ci, public.name n, public.role_type rt WHERE n.id = ci.person_id AND rt.id = ci.role_id AND n.id = an.person_id AND chn.id = ci.person_role_id AND n.gender = 'f' AND rt.role = 'actress' INTERSECT SELECT mc.movie_id AS key1 FROM public.company_name cn, public.movie_companies mc WHERE cn.id = mc.company_id AND cn.country_code = '[us]' INTERSECT SELECT mi.movie_id AS key1 FROM public.info_type it, public.movie_info mi WHERE it.id = mi.info_type_id AND it.info = 'release dates') x) b1 ON title.id = b1.key1
+WHERE (b1.hit IS NOT NULL AND COALESCE(title.production_year > 2000, false));

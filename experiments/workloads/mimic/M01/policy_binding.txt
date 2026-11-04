@@ -1,0 +1,4 @@
+query: q1
+1.ast = a1
+1.op1 = EQ
+1.value1 = 1

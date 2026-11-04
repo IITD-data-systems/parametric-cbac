@@ -1,0 +1,11 @@
+policy 1
+target: lineitem
+atom a1: orders.o_orderkey @op1 lineitem.l_orderkey
+atom a2: customer.c_custkey @op2 orders.o_custkey
+atom a3: nation.n_nationkey @op3 customer.c_nationkey
+atom a4: region.r_regionkey @op4 nation.n_regionkey
+atom a5: region.r_name @op5 @value1
+atom a6: orders.o_orderdate @op6 lineitem.l_shipdate
+atom a7: orders.o_orderpriority @op7 @value2
+atom a8: orders.o_totalprice @op8 @value3
+end

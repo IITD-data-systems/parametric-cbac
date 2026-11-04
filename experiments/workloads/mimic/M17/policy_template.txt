@@ -1,0 +1,10 @@
+policy 1
+target: chartevents
+atom a1: procedureevents.stay_id @op1 chartevents.stay_id
+atom a2: procedureevents.itemid @op2 @value1
+atom a3: chartevents.charttime @op3 procedureevents.starttime
+atom a4: chartevents.charttime @op4 procedureevents.endtime
+atom a5: procedureevents.stay_id @op5 chartevents.stay_id
+atom a6: d_items.itemid @op6 procedureevents.itemid
+atom a7: d_items.label @op7 @value2
+end

@@ -1,0 +1,22 @@
+query: q1
+1.ast = EXISTS ((a1 AND a2 AND a3 AND a4 AND a5 AND a6 AND (a7 OR a8 OR a9 OR a10 OR a11 OR a12)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.op8 = EQ
+1.op9 = EQ
+1.op10 = EQ
+1.op11 = EQ
+1.op12 = EQ
+1.value1 = 'genres'
+1.value2 = 'votes'
+1.value3 = 'Horror'
+1.value4 = 'Action'
+1.value5 = 'Sci-Fi'
+1.value6 = 'Thriller'
+1.value7 = 'Crime'
+1.value8 = 'War'

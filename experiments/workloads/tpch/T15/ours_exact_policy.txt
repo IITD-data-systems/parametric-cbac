@@ -1,0 +1,1 @@
+1. lineitem: (EXISTS (SELECT 1 FROM public.orders o WHERE o.o_orderdate = lineitem.l_shipdate AND o.o_orderpriority = '1-URGENT' AND o.o_totalprice > 450000) OR EXISTS (SELECT 1 FROM public.supplier s, public.nation n WHERE s.s_suppkey = lineitem.l_suppkey AND n.n_nationkey = s.s_nationkey AND n.n_name = 'JAPAN'))

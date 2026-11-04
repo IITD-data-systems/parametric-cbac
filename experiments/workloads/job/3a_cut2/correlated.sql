@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.title title WHERE EXISTS (SELECT 1 FROM public.movie_info mi WHERE title.id = mi.movie_id AND (mi.info = 'Sweden' OR mi.info = 'Norway' OR mi.info = 'Germany' OR mi.info = 'Denmark' OR mi.info = 'Swedish' OR mi.info = 'Denish' OR mi.info = 'Norwegian' OR mi.info = 'German') AND title.production_year > 2005);

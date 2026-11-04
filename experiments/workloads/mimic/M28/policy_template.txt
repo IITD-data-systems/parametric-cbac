@@ -1,0 +1,18 @@
+policy 1
+target: chartevents
+atom a1: icustays.stay_id @op1 chartevents.stay_id
+atom a2: admissions.hadm_id @op2 icustays.hadm_id
+atom a3: patients.subject_id @op3 admissions.subject_id
+atom a4: patients.anchor_age @op4 @value1
+atom a5: inputevents.stay_id @op5 icustays.stay_id
+atom a6: inputevents.itemid @op6 @value2
+atom a7: chartevents.charttime @op7 inputevents.starttime
+atom a8: chartevents.charttime @op8 inputevents.endtime
+atom a9: icustays.stay_id @op9 chartevents.stay_id
+atom a10: transfers.hadm_id @op10 icustays.hadm_id
+atom a11: services.hadm_id @op11 transfers.hadm_id
+atom a12: services.curr_service @op12 @value3
+atom a13: chartevents.charttime @op13 transfers.intime
+atom a14: chartevents.charttime @op14 transfers.outtime
+atom a15: procedures_icd.hadm_id @op15 transfers.hadm_id
+end

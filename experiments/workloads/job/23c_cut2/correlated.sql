@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.title title WHERE EXISTS (SELECT 1 FROM public.kind_type kt WHERE kt.id = title.kind_id AND (kt.kind = 'movie' OR kt.kind = 'tv movie' OR kt.kind = 'video movie' OR kt.kind = 'video game') AND title.production_year > 1990);

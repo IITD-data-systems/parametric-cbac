@@ -1,0 +1,6 @@
+SELECT count(*) FROM public.chartevents chartevents
+  LEFT JOIN (SELECT DISTINCT key1, 1 AS hit FROM (SELECT po.hadm_id AS key1 FROM public.poe po WHERE po.order_provider_id = 'P57YCB') x) b1 ON chartevents.hadm_id = b1.key1
+  LEFT JOIN (SELECT DISTINCT d.charttime AS key1, d.stay_id AS key2, 1 AS hit FROM (SELECT DISTINCT charttime, stay_id FROM public.chartevents) d, public.icustays i, public.transfers t WHERE t.hadm_id = i.hadm_id AND t.careunit = i.first_careunit AND d.charttime >= t.intime AND d.charttime <= t.outtime AND d.stay_id = i.stay_id) b2 ON chartevents.charttime = b2.key1 AND chartevents.stay_id = b2.key2
+  LEFT JOIN (SELECT DISTINCT key1, 1 AS hit FROM (SELECT d.hadm_id AS key1 FROM public.diagnoses_icd d, public.d_icd_diagnoses dd WHERE d.icd_code = 'Z66' AND dd.icd_code = d.icd_code AND dd.icd_version = d.icd_version) x) b3 ON chartevents.hadm_id = b3.key1
+  LEFT JOIN (SELECT DISTINCT key1, key2, 1 AS hit FROM (SELECT l.charttime AS key1, l.subject_id AS key2 FROM public.labevents l, public.d_labitems dl WHERE l.priority = 'STAT' AND l.flag = 'abnormal' AND dl.itemid = l.itemid AND dl.category = 'Chemistry') x) b4 ON chartevents.charttime = b4.key1 AND chartevents.subject_id = b4.key2
+WHERE (b1.hit IS NOT NULL OR (b2.hit IS NOT NULL AND b3.hit IS NULL) OR b4.hit IS NOT NULL);

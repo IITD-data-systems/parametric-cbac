@@ -1,0 +1,15 @@
+policy 1
+target: chartevents
+atom a1: poe.hadm_id @op1 chartevents.hadm_id
+atom a2: poe.order_provider_id @op2 @value1
+atom a3: admissions.hadm_id @op3 chartevents.hadm_id
+atom a4: icustays.stay_id @op4 chartevents.stay_id
+atom a5: patients.subject_id @op5 admissions.subject_id
+atom a6: patients.anchor_age @op6 @value2
+atom a7: procedureevents.stay_id @op7 icustays.stay_id
+atom a8: d_items.itemid @op8 procedureevents.itemid
+atom a9: d_items.label @op9 @value3
+atom a10: admissions.hadm_id @op10 chartevents.hadm_id
+atom a11: diagnoses_icd.hadm_id @op11 admissions.hadm_id
+atom a12: diagnoses_icd.icd_code @op12 @value4
+end

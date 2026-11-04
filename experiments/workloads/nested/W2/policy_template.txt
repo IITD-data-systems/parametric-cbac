@@ -1,0 +1,49 @@
+policy 1
+target: lineitem
+occ customer__nested2: customer
+occ customer__nested9: customer
+occ lineitem: lineitem
+occ lineitem__nested11: lineitem
+occ nation__nested6: nation
+occ orders__nested1: orders
+occ orders__nested8: orders
+occ part__nested10: part
+occ part__nested3: part
+occ partsupp__nested12: partsupp
+occ partsupp__nested4: partsupp
+occ region__nested7: region
+occ supplier__nested13: supplier
+occ supplier__nested5: supplier
+atom a1: orders__nested1.o_orderkey = lineitem.l_orderkey
+atom a2: customer__nested2.c_custkey = orders__nested1.o_custkey
+atom a3: part__nested3.p_partkey = lineitem.l_partkey
+atom a4: lineitem.l_shipmode != 'AIR'
+atom a5: lineitem.l_discount != lineitem.l_tax
+atom a6: orders__nested1.o_totalprice > 25000
+atom a7: orders__nested1.o_totalprice <= 215000
+atom a8: partsupp__nested4.ps_partkey = part__nested3.p_partkey
+atom a9: supplier__nested5.s_suppkey = partsupp__nested4.ps_suppkey
+atom a10: lineitem.l_suppkey != partsupp__nested4.ps_suppkey
+atom a11: supplier__nested5.s_nationkey <= customer__nested2.c_nationkey
+atom a12: supplier__nested5.s_acctbal <= partsupp__nested4.ps_supplycost
+atom a13: supplier__nested5.s_acctbal < customer__nested2.c_acctbal
+atom a14: nation__nested6.n_nationkey = supplier__nested5.s_nationkey
+atom a15: region__nested7.r_regionkey = nation__nested6.n_regionkey
+atom a16: region__nested7.r_name != 'EUROPE'
+atom a17: orders__nested8.o_orderkey = lineitem.l_orderkey
+atom a18: customer__nested9.c_custkey = orders__nested8.o_custkey
+atom a19: part__nested10.p_partkey = lineitem.l_partkey
+atom a20: customer__nested9.c_acctbal < lineitem.l_extendedprice
+atom a21: lineitem__nested11.l_partkey = lineitem.l_partkey
+atom a22: lineitem__nested11.l_suppkey != lineitem.l_suppkey
+atom a23: lineitem__nested11.l_receiptdate < lineitem.l_receiptdate
+atom a24: lineitem__nested11.l_discount < lineitem.l_discount
+atom a25: lineitem__nested11.l_tax > lineitem.l_tax
+atom a26: lineitem__nested11.l_discount >= 0.01
+atom a27: lineitem__nested11.l_discount <= 0.05
+atom a28: partsupp__nested12.ps_partkey = part__nested10.p_partkey
+atom a29: supplier__nested13.s_suppkey = partsupp__nested12.ps_suppkey
+atom a30: lineitem.l_suppkey > partsupp__nested12.ps_suppkey
+atom a31: supplier__nested13.s_nationkey != customer__nested9.c_nationkey
+atom a32: supplier__nested13.s_acctbal >= partsupp__nested12.ps_supplycost
+end

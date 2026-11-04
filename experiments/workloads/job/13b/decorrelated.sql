@@ -1,0 +1,4 @@
+SELECT count(*) FROM public.title title
+  LEFT JOIN (SELECT key1, 1 AS hit FROM (SELECT mc.movie_id AS key1 FROM public.company_name cn, public.company_type ct, public.movie_companies mc WHERE cn.id = mc.company_id AND ct.id = mc.company_type_id AND cn.country_code = '[us]' AND ct.kind = 'production companies' INTERSECT SELECT miidx.movie_id AS key1 FROM public.info_type it, public.movie_info_idx miidx WHERE it.id = miidx.info_type_id AND it.info = 'rating' INTERSECT SELECT mi.movie_id AS key1 FROM public.info_type it2, public.movie_info mi WHERE it2.id = mi.info_type_id AND it2.info = 'release dates') x) b1 ON title.id = b1.key1
+  LEFT JOIN (SELECT DISTINCT key1, 1 AS hit FROM (SELECT kt.id AS key1 FROM public.kind_type kt WHERE kt.kind = 'movie') x) b2 ON title.kind_id = b2.key1
+WHERE (b2.hit IS NOT NULL AND b1.hit IS NOT NULL);

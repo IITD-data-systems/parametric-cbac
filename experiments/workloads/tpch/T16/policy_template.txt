@@ -1,0 +1,9 @@
+policy 1
+target: lineitem
+atom a1: orders.o_orderdate @op1 lineitem.l_receiptdate
+atom a2: orders.o_orderpriority @op2 @value1
+atom a3: orders.o_totalprice @op3 @value2
+atom a4: orders.o_orderkey @op4 lineitem.l_orderkey
+atom a5: customer.c_custkey @op5 orders.o_custkey
+atom a6: customer.c_acctbal @op6 @value3
+end

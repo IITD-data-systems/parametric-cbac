@@ -1,0 +1,3 @@
+SELECT count(*) FROM public.title title
+  LEFT JOIN (SELECT key1, 1 AS hit FROM (SELECT ci.movie_id AS key1 FROM public.cast_info ci, public.name n WHERE n.id = ci.person_id INTERSECT SELECT mk.movie_id AS key1 FROM public.keyword k, public.movie_keyword mk WHERE k.id = mk.keyword_id AND (k.keyword = 'superhero' OR k.keyword = 'sequel' OR k.keyword = 'second-part' OR k.keyword = 'marvel-comics' OR k.keyword = 'based-on-comic' OR k.keyword = 'tv-special' OR k.keyword = 'fight' OR k.keyword = 'violence')) x) b1 ON title.id = b1.key1
+WHERE (b1.hit IS NOT NULL AND COALESCE(title.production_year > 2000, false));

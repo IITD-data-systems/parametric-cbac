@@ -1,0 +1,8 @@
+policy 1
+target: chartevents
+atom a1: icustays.stay_id @op1 chartevents.stay_id
+atom a2: transfers.hadm_id @op2 icustays.hadm_id
+atom a3: transfers.careunit @op3 icustays.first_careunit
+atom a4: chartevents.charttime @op4 transfers.intime
+atom a5: chartevents.charttime @op5 transfers.outtime
+end

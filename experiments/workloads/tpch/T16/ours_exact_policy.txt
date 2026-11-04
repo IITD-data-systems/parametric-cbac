@@ -1,0 +1,1 @@
+1. lineitem: NOT EXISTS (SELECT 1 FROM public.orders o WHERE o.o_orderdate = lineitem.l_receiptdate AND o.o_orderpriority = '1-URGENT' AND o.o_totalprice > 450000) AND NOT EXISTS (SELECT 1 FROM public.orders o, public.customer c WHERE o.o_orderkey = lineitem.l_orderkey AND c.c_custkey = o.o_custkey AND c.c_acctbal < 0)

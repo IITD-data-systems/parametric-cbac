@@ -1,0 +1,8 @@
+policy 1
+target: lineitem
+atom a1: supplier.s_acctbal @op1 lineitem.l_extendedprice
+atom a2: supplier.s_nationkey @op2 @value1
+atom a3: orders.o_orderkey @op3 lineitem.l_orderkey
+atom a4: customer.c_custkey @op4 orders.o_custkey
+atom a5: customer.c_acctbal @op5 @value2
+end

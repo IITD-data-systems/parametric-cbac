@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.lineitem lineitem WHERE l_shipmode = 'TRUCK' AND EXISTS (SELECT 1 FROM public.orders o WHERE o.o_orderdate = lineitem.l_shipdate AND o.o_orderpriority = '1-URGENT' AND o.o_totalprice > 450000);

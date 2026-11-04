@@ -1,0 +1,12 @@
+policy 1
+target: chartevents
+atom a1: prescriptions.hadm_id @op1 chartevents.hadm_id
+atom a2: prescriptions.drug @op2 @value1
+atom a3: pharmacy.pharmacy_id @op3 prescriptions.pharmacy_id
+atom a4: emar.pharmacy_id @op4 pharmacy.pharmacy_id
+atom a5: emar.event_txt @op5 @value2
+atom a6: chartevents.charttime @op6 emar.charttime
+atom a7: admissions.hadm_id @op7 chartevents.hadm_id
+atom a8: patients.subject_id @op8 admissions.subject_id
+atom a9: patients.anchor_age @op9 @value3
+end

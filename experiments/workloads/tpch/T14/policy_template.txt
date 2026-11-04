@@ -1,0 +1,6 @@
+policy 1
+target: lineitem
+atom a1: supplier.s_acctbal @op1 lineitem.l_extendedprice
+atom a2: nation.n_nationkey @op2 supplier.s_nationkey
+atom a3: nation.n_regionkey @op3 @value1
+end

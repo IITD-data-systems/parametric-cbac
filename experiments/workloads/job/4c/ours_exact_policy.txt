@@ -1,0 +1,1 @@
+1. title: EXISTS (SELECT 1 FROM public.info_type it, public.keyword k, public.movie_info_idx mi_idx, public.movie_keyword mk WHERE title.id = mi_idx.movie_id AND title.id = mk.movie_id AND k.id = mk.keyword_id AND it.id = mi_idx.info_type_id AND it.info = 'rating' AND title.production_year > 1990)

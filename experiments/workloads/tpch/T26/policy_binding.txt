@@ -1,0 +1,13 @@
+query: q1
+1.ast = (EXISTS ((a1 AND a2 AND a3 AND a4 AND a5)) OR EXISTS ((a6 AND a7 AND a8 AND a9)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.op8 = EQ
+1.op9 = EQ
+1.value1 = 'EUROPE'
+1.value2 = 'EUROPE'

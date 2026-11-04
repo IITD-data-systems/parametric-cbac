@@ -1,0 +1,1 @@
+1. chartevents: NOT EXISTS (SELECT 1 FROM public.labevents l, public.d_labitems dl WHERE l.subject_id = chartevents.subject_id AND l.charttime = chartevents.charttime AND dl.itemid = l.itemid AND dl.category = 'Blood Gas') AND NOT EXISTS (SELECT 1 FROM public.admissions a WHERE a.hadm_id = chartevents.hadm_id AND a.hospital_expire_flag = 1)

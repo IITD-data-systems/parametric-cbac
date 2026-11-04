@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.lineitem lineitem WHERE EXISTS (SELECT 1 FROM public.supplier s, public.nation n WHERE s.s_acctbal >= lineitem.l_extendedprice AND n.n_nationkey = s.s_nationkey AND n.n_regionkey = 3);

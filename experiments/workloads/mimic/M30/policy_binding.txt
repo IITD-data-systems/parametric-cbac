@@ -1,0 +1,24 @@
+query: q1
+1.ast = (EXISTS ((a1 AND a2)) OR (EXISTS ((a3 AND a4 AND a5 AND a6 AND a7)) AND NOT EXISTS ((a8 AND a9 AND a10 AND a11))) OR EXISTS ((a12 AND a13 AND a14 AND a15 AND a16 AND a17)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = GE
+1.op7 = LE
+1.op8 = EQ
+1.op9 = EQ
+1.op10 = EQ
+1.op11 = EQ
+1.op12 = EQ
+1.op13 = EQ
+1.op14 = EQ
+1.op15 = EQ
+1.op16 = EQ
+1.op17 = EQ
+1.value1 = 'P57YCB'
+1.value2 = 'Z66'
+1.value3 = 'STAT'
+1.value4 = 'abnormal'
+1.value5 = 'Chemistry'

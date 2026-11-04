@@ -1,0 +1,16 @@
+policy 1
+target: lineitem
+atom a1: orders.o_orderkey @op1 lineitem.l_orderkey
+atom a2: orders.o_orderstatus @op2 @value1
+atom a3: lineitem.l_receiptdate @op3 lineitem.l_commitdate
+atom a4: supplier.s_suppkey @op4 lineitem.l_suppkey
+atom a5: nation.n_nationkey @op5 supplier.s_nationkey
+atom a6: nation.n_name @op6 @value2
+atom a7: supplier.s_suppkey @op7 lineitem.l_suppkey
+atom a8: supplier.s_nationkey @op8 @value3
+atom a9: partsupp.ps_partkey @op9 lineitem.l_partkey
+atom a10: partsupp.ps_suppkey @op10 lineitem.l_suppkey
+atom a11: part.p_partkey @op11 partsupp.ps_partkey
+atom a12: part.p_size @op12 @value4
+atom a13: partsupp.ps_availqty @op13 @value5
+end

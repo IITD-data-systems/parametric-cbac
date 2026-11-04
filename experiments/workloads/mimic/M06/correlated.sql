@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE (warning = 1 OR NOT EXISTS (SELECT 1 FROM public.admissions a WHERE a.hadm_id = chartevents.hadm_id AND a.hospital_expire_flag = 1));

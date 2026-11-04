@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.lineitem lineitem WHERE EXISTS (SELECT 1 FROM public.orders o, public.customer c, public.nation n WHERE o.o_orderkey = lineitem.l_orderkey AND c.c_custkey = o.o_custkey AND n.n_nationkey = c.c_nationkey AND n.n_name = 'FRANCE');

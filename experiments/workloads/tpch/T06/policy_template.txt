@@ -1,0 +1,6 @@
+policy 1
+target: lineitem
+atom a1: lineitem.l_returnflag @op1 @value1
+atom a2: orders.o_orderkey @op2 lineitem.l_orderkey
+atom a3: orders.o_orderstatus @op3 @value2
+end

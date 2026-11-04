@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE NOT EXISTS (SELECT 1 FROM public.admissions a, public.patients p WHERE a.hadm_id = chartevents.hadm_id AND p.subject_id = a.subject_id AND p.anchor_age >= 75) OR NOT EXISTS (SELECT 1 FROM public.admissions a WHERE a.hadm_id = chartevents.hadm_id AND a.hospital_expire_flag = 1);

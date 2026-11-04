@@ -1,0 +1,6 @@
+query: q1
+1.ast = (a1 OR a2)
+1.op1 = EQ
+1.op2 = EQ
+1.value1 = 'AIR'
+1.value2 = 'REG AIR'

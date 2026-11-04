@@ -1,0 +1,20 @@
+policy 1
+target: chartevents
+atom a1: poe.hadm_id @op1 chartevents.hadm_id
+atom a2: poe.order_provider_id @op2 @value1
+atom a3: icustays.stay_id @op3 chartevents.stay_id
+atom a4: transfers.hadm_id @op4 icustays.hadm_id
+atom a5: transfers.careunit @op5 icustays.first_careunit
+atom a6: chartevents.charttime @op6 transfers.intime
+atom a7: chartevents.charttime @op7 transfers.outtime
+atom a8: diagnoses_icd.hadm_id @op8 chartevents.hadm_id
+atom a9: diagnoses_icd.icd_code @op9 @value2
+atom a10: d_icd_diagnoses.icd_code @op10 diagnoses_icd.icd_code
+atom a11: d_icd_diagnoses.icd_version @op11 diagnoses_icd.icd_version
+atom a12: labevents.subject_id @op12 chartevents.subject_id
+atom a13: labevents.charttime @op13 chartevents.charttime
+atom a14: labevents.priority @op14 @value3
+atom a15: labevents.flag @op15 @value4
+atom a16: d_labitems.itemid @op16 labevents.itemid
+atom a17: d_labitems.category @op17 @value5
+end

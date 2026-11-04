@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.title title WHERE EXISTS (SELECT 1 FROM public.company_type ct, public.info_type it, public.movie_companies mc, public.movie_info_idx mi_idx WHERE ct.id = mc.company_type_id AND title.id = mc.movie_id AND title.id = mi_idx.movie_id AND it.id = mi_idx.info_type_id AND ct.kind = 'production companies' AND it.info = 'top 250 rank');

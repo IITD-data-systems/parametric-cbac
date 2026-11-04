@@ -1,0 +1,5 @@
+policy 1
+target: chartevents
+atom a1: chartevents.valueuom @op1 @value1
+atom a2: chartevents.valuenum @op2 @value2
+end

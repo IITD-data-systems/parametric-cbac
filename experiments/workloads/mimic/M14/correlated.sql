@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE EXISTS (SELECT 1 FROM public.icustays i, public.transfers t WHERE i.stay_id = chartevents.stay_id AND t.hadm_id = i.hadm_id AND t.careunit = i.first_careunit AND chartevents.charttime >= t.intime AND chartevents.charttime <= t.outtime);

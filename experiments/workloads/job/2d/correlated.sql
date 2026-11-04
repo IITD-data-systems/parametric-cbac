@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.title title WHERE EXISTS (SELECT 1 FROM public.company_name cn, public.keyword k, public.movie_companies mc, public.movie_keyword mk WHERE cn.id = mc.company_id AND mc.movie_id = title.id AND title.id = mk.movie_id AND mk.keyword_id = k.id AND cn.country_code = '[us]' AND k.keyword = 'character-name-in-title');

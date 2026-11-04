@@ -1,0 +1,6 @@
+policy 1
+target: chartevents
+atom a1: inputevents.stay_id @op1 chartevents.stay_id
+atom a2: inputevents.caregiver_id @op2 chartevents.caregiver_id
+atom a3: inputevents.itemid @op3 @value1
+end

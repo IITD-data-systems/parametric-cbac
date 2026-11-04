@@ -1,0 +1,8 @@
+query: q1
+1.ast = ((a1 OR a2) AND a3)
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.value1 = 'bpm'
+1.value2 = 'insp/min'
+1.value3 = 0

@@ -1,0 +1,17 @@
+policy 1
+target: title
+atom a1: title.id @op1 movie_info.movie_id
+atom a2: title.id @op2 movie_companies.movie_id
+atom a3: title.id @op3 cast_info.movie_id
+atom a4: company_name.id @op4 movie_companies.company_id
+atom a5: info_type.id @op5 movie_info.info_type_id
+atom a6: name.id @op6 cast_info.person_id
+atom a7: role_type.id @op7 cast_info.role_id
+atom a8: name.id @op8 aka_name.person_id
+atom a9: char_name.id @op9 cast_info.person_role_id
+atom a10: company_name.country_code @op10 @value1
+atom a11: info_type.info @op11 @value2
+atom a12: name.gender @op12 @value3
+atom a13: role_type.role @op13 @value4
+atom a14: title.production_year @op14 @value5
+end

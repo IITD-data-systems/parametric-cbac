@@ -1,0 +1,33 @@
+policy 1
+target: title
+atom a1: kind_type.id @op1 title.kind_id
+atom a2: title.id @op2 movie_info.movie_id
+atom a3: title.id @op3 movie_keyword.movie_id
+atom a4: title.id @op4 movie_info_idx.movie_id
+atom a5: title.id @op5 movie_companies.movie_id
+atom a6: keyword.id @op6 movie_keyword.keyword_id
+atom a7: info_type.id @op7 movie_info.info_type_id
+atom a8: info_type_2.id @op8 movie_info_idx.info_type_id
+atom a9: company_type.id @op9 movie_companies.company_type_id
+atom a10: company_name.id @op10 movie_companies.company_id
+atom a11: company_name.country_code @op11 @value1
+atom a12: info_type.info @op12 @value2
+atom a13: info_type_2.info @op13 @value3
+atom a14: keyword.keyword @op14 @value4
+atom a15: keyword.keyword @op15 @value5
+atom a16: keyword.keyword @op16 @value6
+atom a17: keyword.keyword @op17 @value7
+atom a18: kind_type.kind @op18 @value8
+atom a19: kind_type.kind @op19 @value9
+atom a20: movie_info.info @op20 @value10
+atom a21: movie_info.info @op21 @value11
+atom a22: movie_info.info @op22 @value12
+atom a23: movie_info.info @op23 @value13
+atom a24: movie_info.info @op24 @value14
+atom a25: movie_info.info @op25 @value15
+atom a26: movie_info.info @op26 @value16
+atom a27: movie_info.info @op27 @value17
+atom a28: movie_info.info @op28 @value18
+atom a29: movie_info.info @op29 @value19
+atom a30: title.production_year @op30 @value20
+end

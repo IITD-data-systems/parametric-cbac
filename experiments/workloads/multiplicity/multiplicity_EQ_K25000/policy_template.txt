@@ -1,0 +1,5 @@
+policy 1
+target: customer_m
+atom a1: supplier_m.grp_25000 @op1 customer_m.grp_25000
+atom a2: supplier_m.grp_5 @op2 @value1
+end

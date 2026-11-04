@@ -1,0 +1,13 @@
+policy 1
+target: chartevents
+atom a1: icustays.stay_id @op1 chartevents.stay_id
+atom a2: admissions.hadm_id @op2 icustays.hadm_id
+atom a3: patients.subject_id @op3 admissions.subject_id
+atom a4: patients.anchor_age @op4 @value1
+atom a5: diagnoses_icd.hadm_id @op5 admissions.hadm_id
+atom a6: diagnoses_icd.icd_code @op6 @value2
+atom a7: d_icd_diagnoses.icd_code @op7 diagnoses_icd.icd_code
+atom a8: d_icd_diagnoses.icd_version @op8 diagnoses_icd.icd_version
+atom a9: d_items.itemid @op9 chartevents.itemid
+atom a10: d_items.category @op10 @value3
+end

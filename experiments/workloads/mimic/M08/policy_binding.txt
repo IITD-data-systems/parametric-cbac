@@ -1,0 +1,9 @@
+query: q1
+1.ast = (a1 AND EXISTS ((a2 AND a3 AND a4 AND a5)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = GE
+1.op5 = LE
+1.value1 = 'insp/min'
+1.value2 = 225792

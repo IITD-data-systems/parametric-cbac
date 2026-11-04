@@ -1,0 +1,15 @@
+policy 1
+target: title
+atom a1: movie_info.movie_id @op1 title.id
+atom a2: movie_info.info @op2 @value1
+atom a3: movie_info.info @op3 @value2
+atom a4: movie_info.info @op4 @value3
+atom a5: movie_info.info @op5 @value4
+atom a6: movie_info.info @op6 @value5
+atom a7: movie_info.info @op7 @value6
+atom a8: movie_info.info @op8 @value7
+atom a9: movie_info.info @op9 @value8
+atom a10: movie_info.info @op10 @value9
+atom a11: title.production_year @op11 @value10
+atom a12: title.production_year @op12 @value11
+end

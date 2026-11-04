@@ -1,0 +1,6 @@
+policy 1
+target: lineitem
+atom a1: part.p_partkey @op1 lineitem.l_partkey
+atom a2: part.p_brand @op2 @value1
+atom a3: part.p_container @op3 @value2
+end

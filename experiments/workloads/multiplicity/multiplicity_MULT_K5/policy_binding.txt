@@ -1,0 +1,6 @@
+query: q1
+1.ast = EXISTS ((a1 AND a2 AND a3))
+1.op1 = EQ
+1.op2 = GE
+1.op3 = LE
+1.value1 = 1201.92

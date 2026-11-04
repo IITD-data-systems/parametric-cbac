@@ -1,0 +1,7 @@
+policy 1
+target: title
+atom a1: kind_type.id @op1 title.kind_id
+atom a2: kind_type.kind @op2 @value1
+atom a3: kind_type.kind @op3 @value2
+atom a4: title.production_year @op4 @value3
+end

@@ -1,0 +1,16 @@
+query: q1
+1.ast = (EXISTS ((a1 AND (a2 OR a3 OR a4 OR a5) AND a6 AND a7)) AND NOT EXISTS ((a8 AND a9)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.op8 = EQ
+1.op9 = EQ
+1.value1 = 'A419'
+1.value2 = '0389'
+1.value3 = 'R6520'
+1.value4 = '99592'
+1.value5 = 'Z66'

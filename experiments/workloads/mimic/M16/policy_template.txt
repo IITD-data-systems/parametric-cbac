@@ -1,0 +1,12 @@
+policy 1
+target: chartevents
+atom a1: diagnoses_icd.hadm_id @op1 chartevents.hadm_id
+atom a2: diagnoses_icd.icd_code @op2 @value1
+atom a3: diagnoses_icd.icd_code @op3 @value2
+atom a4: diagnoses_icd.icd_code @op4 @value3
+atom a5: diagnoses_icd.icd_code @op5 @value4
+atom a6: d_icd_diagnoses.icd_code @op6 diagnoses_icd.icd_code
+atom a7: d_icd_diagnoses.icd_version @op7 diagnoses_icd.icd_version
+atom a8: diagnoses_icd.hadm_id @op8 chartevents.hadm_id
+atom a9: diagnoses_icd.icd_code @op9 @value5
+end

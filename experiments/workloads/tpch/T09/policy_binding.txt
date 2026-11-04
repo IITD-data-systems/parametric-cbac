@@ -1,0 +1,9 @@
+query: q1
+1.ast = (a1 OR NOT EXISTS ((a2 AND a3 AND a4)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = GT
+1.value1 = 'DELIVER IN PERSON'
+1.value2 = '1-URGENT'
+1.value3 = 450000

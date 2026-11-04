@@ -1,0 +1,9 @@
+query: q1
+1.ast = (NOT EXISTS ((a1 AND a2 AND a3)) OR NOT EXISTS ((a4 AND a5)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = LT
+1.op4 = EQ
+1.op5 = EQ
+1.value1 = 0
+1.value2 = 'O'

@@ -1,0 +1,10 @@
+query: q1
+1.ast = (EXISTS ((a1 AND a2 AND a3 AND a4)) AND NOT EXISTS ((a5 AND a6)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.value1 = 'Antibiotics'
+1.value2 = 222168

@@ -1,0 +1,9 @@
+policy 1
+target: title
+atom a1: company_type.id @op1 movie_companies.company_type_id
+atom a2: title.id @op2 movie_companies.movie_id
+atom a3: title.id @op3 movie_info_idx.movie_id
+atom a4: info_type.id @op4 movie_info_idx.info_type_id
+atom a5: company_type.kind @op5 @value1
+atom a6: info_type.info @op6 @value2
+end

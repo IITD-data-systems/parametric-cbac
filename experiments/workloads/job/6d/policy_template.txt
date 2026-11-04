@@ -1,0 +1,16 @@
+policy 1
+target: title
+atom a1: keyword.id @op1 movie_keyword.keyword_id
+atom a2: title.id @op2 movie_keyword.movie_id
+atom a3: title.id @op3 cast_info.movie_id
+atom a4: name.id @op4 cast_info.person_id
+atom a5: keyword.keyword @op5 @value1
+atom a6: keyword.keyword @op6 @value2
+atom a7: keyword.keyword @op7 @value3
+atom a8: keyword.keyword @op8 @value4
+atom a9: keyword.keyword @op9 @value5
+atom a10: keyword.keyword @op10 @value6
+atom a11: keyword.keyword @op11 @value7
+atom a12: keyword.keyword @op12 @value8
+atom a13: title.production_year @op13 @value9
+end

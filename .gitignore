@@ -1,0 +1,6 @@
+build/
+src/ranks/builder/build/
+artifacts/
+__pycache__/
+*.o
+*.so

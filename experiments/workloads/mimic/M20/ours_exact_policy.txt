@@ -1,0 +1,1 @@
+1. chartevents: NOT EXISTS (SELECT 1 FROM public.diagnoses_icd d WHERE d.hadm_id = chartevents.hadm_id AND ((d.icd_version = 10 AND d.icd_code >= 'F' AND d.icd_code < 'G') OR (d.icd_version = 9 AND d.icd_code >= '29' AND d.icd_code < '32'))) OR EXISTS (SELECT 1 FROM public.inputevents ie WHERE ie.stay_id = chartevents.stay_id AND ie.caregiver_id = chartevents.caregiver_id)

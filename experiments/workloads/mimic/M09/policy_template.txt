@@ -1,0 +1,6 @@
+policy 1
+target: chartevents
+atom a1: chartevents.valueuom @op1 @value1
+atom a2: labevents.subject_id @op2 chartevents.subject_id
+atom a3: labevents.charttime @op3 chartevents.charttime
+end

@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.title title WHERE EXISTS (SELECT 1 FROM public.movie_info mi WHERE title.id = mi.movie_id AND (mi.info = 'Horror' OR mi.info = 'Action' OR mi.info = 'Sci-Fi' OR mi.info = 'Thriller' OR mi.info = 'Crime' OR mi.info = 'War'));

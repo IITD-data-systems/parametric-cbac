@@ -1,0 +1,7 @@
+policy 1
+target: lineitem
+atom a1: lineitem.l_shipinstruct @op1 @value1
+atom a2: orders.o_orderdate @op2 lineitem.l_receiptdate
+atom a3: orders.o_orderpriority @op3 @value2
+atom a4: orders.o_totalprice @op4 @value3
+end

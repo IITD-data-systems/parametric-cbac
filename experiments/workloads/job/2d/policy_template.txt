@@ -1,0 +1,9 @@
+policy 1
+target: title
+atom a1: company_name.id @op1 movie_companies.company_id
+atom a2: movie_companies.movie_id @op2 title.id
+atom a3: title.id @op3 movie_keyword.movie_id
+atom a4: movie_keyword.keyword_id @op4 keyword.id
+atom a5: company_name.country_code @op5 @value1
+atom a6: keyword.keyword @op6 @value2
+end

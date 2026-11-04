@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE EXISTS (SELECT 1 FROM public.d_items d, public.icustays i WHERE d.itemid = chartevents.itemid AND d.category = 'Respiratory' AND i.stay_id = chartevents.stay_id AND i.first_careunit = 'Medical Intensive Care Unit (MICU)');

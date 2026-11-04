@@ -1,0 +1,5 @@
+policy 1
+target: lineitem
+atom a1: lineitem.l_discount @op1 @value1
+atom a2: lineitem.l_quantity @op2 @value2
+end

@@ -1,0 +1,20 @@
+policy 1
+target: chartevents
+atom a1: poe.hadm_id @op1 chartevents.hadm_id
+atom a2: poe.order_provider_id @op2 @value1
+atom a3: admissions.hadm_id @op3 chartevents.hadm_id
+atom a4: admissions.admission_type @op4 @value2
+atom a5: drgcodes.hadm_id @op5 admissions.hadm_id
+atom a6: drgcodes.drg_type @op6 @value3
+atom a7: drgcodes.drg_severity @op7 @value4
+atom a8: services.hadm_id @op8 admissions.hadm_id
+atom a9: icustays.stay_id @op9 chartevents.stay_id
+atom a10: transfers.hadm_id @op10 icustays.hadm_id
+atom a11: transfers.careunit @op11 icustays.first_careunit
+atom a12: chartevents.charttime @op12 transfers.intime
+atom a13: chartevents.charttime @op13 transfers.outtime
+atom a14: patients.subject_id @op14 icustays.subject_id
+atom a15: patients.anchor_age @op15 @value5
+atom a16: microbiologyevents.hadm_id @op16 icustays.hadm_id
+atom a17: microbiologyevents.interpretation @op17 @value6
+end

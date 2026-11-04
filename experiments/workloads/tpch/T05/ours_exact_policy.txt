@@ -1,0 +1,1 @@
+1. lineitem: NOT EXISTS (SELECT 1 FROM public.partsupp ps WHERE ps.ps_partkey = lineitem.l_partkey AND ps.ps_suppkey = lineitem.l_suppkey AND ps.ps_availqty < 3000)

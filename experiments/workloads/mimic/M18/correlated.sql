@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE EXISTS (SELECT 1 FROM public.inputevents ie, public.d_items d WHERE ie.stay_id = chartevents.stay_id AND ie.caregiver_id = chartevents.caregiver_id AND d.itemid = ie.itemid AND d.category = 'Antibiotics') AND NOT EXISTS (SELECT 1 FROM public.inputevents ie WHERE ie.stay_id = chartevents.stay_id AND ie.itemid = 222168);

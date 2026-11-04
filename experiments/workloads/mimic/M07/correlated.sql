@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE EXISTS (SELECT 1 FROM public.inputevents ie WHERE ie.stay_id = chartevents.stay_id AND ie.caregiver_id = chartevents.caregiver_id AND ie.itemid = 221906);

@@ -1,0 +1,5 @@
+query: q1
+1.ast = (a1 AND a2)
+1.op1 = EQ
+1.op2 = GT
+1.value1 = 'R'

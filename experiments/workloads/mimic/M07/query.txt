@@ -1,0 +1,1 @@
+q1: SELECT count(*) FROM public.chartevents

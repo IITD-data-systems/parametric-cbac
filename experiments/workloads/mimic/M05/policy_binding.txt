@@ -1,0 +1,4 @@
+query: q1
+1.ast = EXISTS ((a1 AND a2))
+1.op1 = EQ
+1.op2 = GT

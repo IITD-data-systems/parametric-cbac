@@ -1,0 +1,8 @@
+policy 1
+target: chartevents
+atom a1: icustays.stay_id @op1 chartevents.stay_id
+atom a2: admissions.hadm_id @op2 icustays.hadm_id
+atom a3: admissions.insurance @op3 @value1
+atom a4: icustays.stay_id @op4 chartevents.stay_id
+atom a5: icustays.first_careunit @op5 @value2
+end

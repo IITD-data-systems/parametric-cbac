@@ -1,0 +1,6 @@
+policy 1
+target: lineitem
+atom a1: partsupp.ps_partkey @op1 lineitem.l_partkey
+atom a2: partsupp.ps_suppkey @op2 lineitem.l_suppkey
+atom a3: partsupp.ps_availqty @op3 @value1
+end

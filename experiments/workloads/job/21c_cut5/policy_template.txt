@@ -1,0 +1,20 @@
+policy 1
+target: title
+atom a1: title.id @op1 movie_companies.movie_id
+atom a2: movie_companies.company_type_id @op2 company_type.id
+atom a3: movie_companies.company_id @op3 company_name.id
+atom a4: movie_info.movie_id @op4 title.id
+atom a5: company_name.country_code @op5 @value1
+atom a6: company_type.kind @op6 @value2
+atom a7: movie_info.info @op7 @value3
+atom a8: movie_info.info @op8 @value4
+atom a9: movie_info.info @op9 @value5
+atom a10: movie_info.info @op10 @value6
+atom a11: movie_info.info @op11 @value7
+atom a12: movie_info.info @op12 @value8
+atom a13: movie_info.info @op13 @value9
+atom a14: movie_info.info @op14 @value10
+atom a15: movie_info.info @op15 @value11
+atom a16: title.production_year @op16 @value12
+atom a17: title.production_year @op17 @value13
+end

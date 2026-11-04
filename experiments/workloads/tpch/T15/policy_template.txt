@@ -1,0 +1,9 @@
+policy 1
+target: lineitem
+atom a1: orders.o_orderdate @op1 lineitem.l_shipdate
+atom a2: orders.o_orderpriority @op2 @value1
+atom a3: orders.o_totalprice @op3 @value2
+atom a4: supplier.s_suppkey @op4 lineitem.l_suppkey
+atom a5: nation.n_nationkey @op5 supplier.s_nationkey
+atom a6: nation.n_name @op6 @value3
+end

@@ -1,0 +1,1 @@
+SELECT count(*) FROM public.chartevents chartevents WHERE EXISTS (SELECT 1 FROM public.icustays i, public.admissions a WHERE i.stay_id = chartevents.stay_id AND a.hadm_id = i.hadm_id AND a.insurance = 'Medicaid') AND EXISTS (SELECT 1 FROM public.icustays i WHERE i.stay_id = chartevents.stay_id AND i.first_careunit = 'Medical Intensive Care Unit (MICU)');

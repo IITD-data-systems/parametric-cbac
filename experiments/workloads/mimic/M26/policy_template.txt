@@ -1,0 +1,20 @@
+policy 1
+target: chartevents
+atom a1: admissions.hadm_id @op1 chartevents.hadm_id
+atom a2: drgcodes.hadm_id @op2 admissions.hadm_id
+atom a3: drgcodes.drg_type @op3 @value1
+atom a4: drgcodes.drg_severity @op4 @value2
+atom a5: services.hadm_id @op5 admissions.hadm_id
+atom a6: services.curr_service @op6 @value3
+atom a7: procedureevents.stay_id @op7 chartevents.stay_id
+atom a8: chartevents.charttime @op8 procedureevents.starttime
+atom a9: chartevents.charttime @op9 procedureevents.endtime
+atom a10: d_items.itemid @op10 procedureevents.itemid
+atom a11: d_items.label @op11 @value4
+atom a12: admissions.hadm_id @op12 chartevents.hadm_id
+atom a13: diagnoses_icd.hadm_id @op13 admissions.hadm_id
+atom a14: diagnoses_icd.icd_code @op14 @value5
+atom a15: diagnoses_icd.icd_code @op15 @value6
+atom a16: d_icd_diagnoses.icd_code @op16 diagnoses_icd.icd_code
+atom a17: d_icd_diagnoses.icd_version @op17 diagnoses_icd.icd_version
+end

@@ -1,0 +1,20 @@
+query: q1
+1.ast = (EXISTS ((a1 AND a2 AND a3 AND a4 AND a5 AND a6 AND a7 AND a8 AND a9 AND a10)) OR NOT EXISTS ((a11 AND a12 AND a13)))
+1.op1 = EQ
+1.op2 = EQ
+1.op3 = EQ
+1.op4 = EQ
+1.op5 = EQ
+1.op6 = EQ
+1.op7 = EQ
+1.op8 = EQ
+1.op9 = GE
+1.op10 = EQ
+1.op11 = EQ
+1.op12 = EQ
+1.op13 = GE
+1.value1 = 'Potassium'
+1.value2 = 'Blood'
+1.value3 = 'abnormal'
+1.value4 = 65
+1.value5 = 65
