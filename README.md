@@ -3,6 +3,8 @@
 Memento enforces parametric content-based row-level policies inside PostgreSQL.
 A row is visible when related rows in other tables exist or do not exist, and the
 policy's operators and constants are bound only at query time.
+Additional experiments, implementation details, and proofs of stated Lemmas and
+Theorems in the paper are given in [the paper with its appendix](docs/paper_with_appendix.pdf).
 
 Instead of compiling each policy into joins, semijoins and antijoins, Memento makes
 decisions the unit of work. It compiles a policy into an AND/OR decision graph,
@@ -30,6 +32,7 @@ of the paper's experiments.
 | `src/postgres/` | the PostgreSQL extension and the paper's engine settings | Appendix D |
 | `experiments/workloads/` | all 113 policies, for Memento and for every baseline | Section 6, Appendix B |
 | `experiments/sample_datasets/` | TPC-H generation and loading | Section 6.1 |
+| `docs/paper_with_appendix.pdf` | the paper with its appendix: additional experiments, implementation details, proofs | |
 | `docs/figures/` | the terminal runs shown below | |
 
 ## Requirements
